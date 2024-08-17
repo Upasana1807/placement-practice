@@ -1,14 +1,15 @@
 # cook your dish here
-def findCount(arr, length, num, diff):
-    a=[]
-    for i in range(length):
-        if abs(num-arr[i]) <= diff:
-            a.append(arr[i])
-    l= len(a)
-    return l
+def findCount(arr, num, diff):
+    a=0
+    for i in arr:
+        if abs(num-i) <= diff:
+            a+=1
+    if a:
+        return a
+    else:
+        return -1
     
 arr= list(map(int, input().split()))
-length = int(input())
 num= int(input())
 diff= int(input())
-print(findCount(arr, length, num, diff))
+print(findCount(arr, num, diff))
