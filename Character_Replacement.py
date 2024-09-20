@@ -1,5 +1,5 @@
 def CharacterReplacement(str, ch1, ch2):
-    str= ((str.replace('a','*')).replace('p','a')).replace('*','p')    
+    str= ((str.replace(ch1,'*')).replace(ch2 , ch1)).replace('*', ch2)    
     return str
 
 str= input()
